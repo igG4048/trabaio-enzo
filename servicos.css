@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "poppins", sans-serif;
+    color: #fff;
+}
+
+
+body{
+    background-color: #161616;
+    margin: 0   ;
+}
+.container{
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    grid-template-rows: 20vh 400vh 20vh;
+    grid-template-areas: "header header"
+                          "main aside"
+                          "footer footer";
+
+}
+header{
+    display: flex;
+    grid-area: header;
+    background-color: #161616;
+justify-content: center;
+}
+main{
+    grid-area: main;
+    background-color: #161616;
+}
+aside{
+    grid-area: aside;
+    background-color: #161616;
+}
+footer{
+    display: flex;
+    grid-area:footer;
+    background-color: #161616;
+    color: #fff;
+    opacity: 70%;
+    justify-content: center;
+}
+h1 {
+   text-align: center;
+   position: relative;
+   left: 115px;
+}
+h2 {
+    text-align: center;
+      position: relative;
+   left: 115px;
+}
+.tunagemum{
+    width: 35%;
+}
+.tunagemdois{
+    width: 35%;
+}
+.tunagemtres{
+    width: 35%;
+}
+.tunagemquatro{
+    width: 35%;
+}
+.tunagemcinco{
+    width: 35%;
+}
+.PINTUras{
+    text-align: center;
+}
+.pinturaum{
+    width: 35%;
+   
+}
+.pinturadois{
+    width: 35%;
+}
+.pinturatres{
+    width: 35%;
+}
+.pinturaquatro{
+    width: 35%;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+    z-index: 1002;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu-btn span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: #fff;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.slide-menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background:#000;
+    color: #fff;
+    transition: left 0.3s ease;
+    padding-top: 60px;
+    z-index: 1001;
+}
+
+.slide-menu ul, li {
+    padding: 15px 20px;
+}
+
+.slide-menu ul, li:hover {
+    background: #000;
+    cursor: pointer;
+}
+
+.slide-menu li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+}
+
+#menu-toggle:checked ~ .slide-menu {
+    left: 0;
+}
+
+#menu-toggle:checked ~ .overlay {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#menu-toggle:checked + .menu-btn span:nth-child(1) {
+    transform: rotate(45deg) translateY(13px);
+    background: #fff;
+}
+
+#menu-toggle:checked + .menu-btn span:nth-child(2) {
+    opacity: 0;
+}
+
+#menu-toggle:checked + .menu-btn span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-13px);
+    background: #fff;
+}

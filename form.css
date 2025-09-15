@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+    
+}
+
+.container h1 {
+    display: flex;
+    color: #fff;
+    justify-content: center;
+    font-size: 60px;
+}
+
+header {
+    background-color: #161616;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #fff;
+    grid-area: header;
+}
+
+body {
+    background: #161616;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    text-align: start;
+    color: #fff;
+    font-size: 25px;
+    margin-top: 100px;
+}
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0px;
+    padding-bottom: 30px;
+}
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, .2);;
+    font-size: 16px;
+    outline: none;
+    border-radius: 40px;
+    color: #fff;
+    padding: 20px 40px 20px 20px;
+}
+
+.input-box input:hover {
+    cursor: pointer;
+}
+
+.states {
+    padding-top: 20px;
+}
+
+.states select:hover {
+    cursor: pointer;
+}
+
+.buttom-radio {
+    padding-top: 20px;
+}
+
+.buttom-radio label, input {
+    padding-right: 20px;
+}
+
+.states select {
+   background-color: #161616; 
+   color: #fff;
+   padding: 8px 12px;
+   border: 1px solid rgba(255, 255, 255, .2);
+   border-radius: 40px;
+   font-size: 16px;
+   appearance: none;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+    z-index: 1002;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu-btn span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: #fff;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.slide-menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background:#000;
+    color: #fff;
+    transition: left 0.3s ease;
+    padding-top: 60px;
+    z-index: 1001;
+}
+
+.slide-menu ul, li {
+    padding: 15px 20px;
+}
+
+.slide-menu ul, li:hover {
+    background: #000;
+    cursor: pointer;
+}
+
+.slide-menu li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+}
+
+#menu-toggle:checked ~ .slide-menu {
+    left: 0;
+}
+
+#menu-toggle:checked ~ .overlay {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#menu-toggle:checked + .menu-btn span:nth-child(1) {
+    transform: rotate(45deg) translateY(13px);
+    background: #fff;
+}
+
+#menu-toggle:checked + .menu-btn span:nth-child(2) {
+    opacity: 0;
+}
+
+#menu-toggle:checked + .menu-btn span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-13px);
+    background: #fff;
+}
+
+.bmw a {
+    text-decoration: none;
+}
+
+.card {
+    display: flex;
+    gap: 5px;
+    border-color: #fff;
+    padding-top: 30px;
+}
+
+.card button {
+    width: 150px;
+    height: 50px;
+    padding: 30;
+    background-color: #fff;
+    border-radius: 40px;
+    cursor: pointer;
+    flex: 1;
+    transition: 0.3s all ease;
+    font-size: 16px;
+    font-family: "poppins", sans-serif;
+}
+
+.card button:hover {
+    flex: 2;  
+}
